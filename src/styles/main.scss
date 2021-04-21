@@ -1,0 +1,90 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+// Variable
+:root {
+	--red: #d92b50;
+	--light: #fff;
+	--blue: #35578e;
+	--green: #009b0a;
+	--yellow: #f1c800;
+	--orange: #ff5e00;
+	--red-dark: #d5001d;
+	// Buttons
+	--btn-red: #d92b50;
+	--btn-red-h: #c32748;
+	--btn-blue: #35578e;
+	--btn-blue-h: #304e80;
+	// Shadow
+	--box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+	--box-shadow-h: 0px 8px 12px rgba(0, 0, 0, 0.1);
+	--overlay: rgba(158, 162, 167, 0.2);
+	//
+	--color-bg-light: #33333c;
+	--color-bg-gray: #3e3e48;
+	--color-bg-lg-blue: #33333c;
+	--color-bg-popup-er: #3e3e48;
+	--gray: #9ea2a7;
+	--dark: #d8d8db;
+	--gray-light: #515158;
+	--gray-light-h: #747479;
+	--color-btn: #d8d8db;
+	--border-gray: #474752;
+}
+
+// Main settings:
+body {
+	background-color: var(--color-bg-light);
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+.row-flex {
+	@include row-flex();
+}
+.col {
+	@include col();
+}
+.title {
+	font-size: 30px;
+	font-weight: 600;
+	color: var(--dark);
+	line-height: 28px;
+}
+// End
+
+// Main
+.main {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+}
+.section-burgers {
+	// .section-burgers__body
+	&__body {
+		padding: 20px 0;
+	}
+	// .section-burgers__col
+	&__col {
+		@include size(3);
+		background-color: var(--color-bg-gray);
+		height: 120px;
+		margin-bottom: 20px;
+		border-radius: 16px;
+		padding: 10px;
+		position: relative;
+	}
+}
+
+.section-header {
+	padding: 30px 0;
+	box-shadow: var(--box-shadow);
+	border-bottom: 1px solid var(--border-gray);
+	&__body {
+	}
+}
